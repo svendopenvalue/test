@@ -1,0 +1,14 @@
+<h2>To Do List</h2>
+
+<p><i>Fill in your to do list</i></p>
+<form>
+  <input #box placeholder="enter task" (change)="onChange($event)" (keyup.enter)="onEnter($event)">
+  <button (click)="onClick()">OK</button>
+</form>
+<ul>
+  <li *ngFor="let hero of heroes" (click)="selectHero(hero)">
+    {{hero.name}}
+  </li>
+</ul>
+
+<app-hero-detail *ngIf="selectedHero" [hero]="selectedHero"></app-hero-detail>
