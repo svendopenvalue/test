@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FooditemsService } from '../fooditems.service';
 
 @Component({
   selector: 'app-add-to-list',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-to-list.component.scss']
 })
 export class AddToListComponent implements OnInit {
-
-  constructor() { }
+  foodItems: any[] = [];
+  constructor(private fooditemsService: FooditemsService) { }
 
   ngOnInit(): void {
+    this.foodItems = this.fooditemsService.fooditems;
   }
 
 }

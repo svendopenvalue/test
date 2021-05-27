@@ -7,6 +7,7 @@ import { ContentComponent } from './content/content.component';
 import { AddToListComponent } from './add-to-list/add-to-list.component';
 import { ListComponent } from './list/list.component';
 import { TotalComponent } from './total/total.component';
+import { FooditemsService } from './fooditems.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { TotalComponent } from './total/total.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    FooditemsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
