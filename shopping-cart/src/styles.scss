@@ -2,3 +2,9 @@
 body{
     font-family: 'lato', 'arial', sans-serif;
 }
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
