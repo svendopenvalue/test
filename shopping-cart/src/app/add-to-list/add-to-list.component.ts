@@ -11,7 +11,12 @@ export class AddToListComponent implements OnInit {
   constructor(private fooditemsService: FooditemsService) { }
 
   ngOnInit(): void {
-    this.foodItems = this.fooditemsService.fooditems;
+    this.foodItems = this.fooditemsService.getItems();
+  }
+  onClickMe(): void{
+    this.fooditemsService.dataToServer();
+    this.fooditemsService.addItems();
+    this.foodItems = this.fooditemsService.getItems();
   }
 
 }
